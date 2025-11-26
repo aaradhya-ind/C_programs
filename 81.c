@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+// Define enumeration for days
+enum Days {SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY};
+
+int main() {
+    enum Days d;
+
+    printf("Days of the week with their integer values:\n");
+    for(d = SUNDAY; d <= SATURDAY; d++) {
+        switch(d) {
+            case SUNDAY:    printf("SUNDAY = %d\n", d); break;
+            case MONDAY:    printf("MONDAY = %d\n", d); break;
+            case TUESDAY:   printf("TUESDAY = %d\n", d); break;
+            case WEDNESDAY: printf("WEDNESDAY = %d\n", d); break;
+            case THURSDAY:  printf("THURSDAY = %d\n", d); break;
+            case FRIDAY:    printf("FRIDAY = %d\n", d); break;
+            case SATURDAY:  printf("SATURDAY = %d\n", d); break;
+        }
+    }
+
+    return 0;
+}
