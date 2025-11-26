@@ -1,0 +1,23 @@
+// Q92 (Strings): Find the first repeating lowercase alphabet in a string
+#include <stdio.h>
+int main() {
+    char str[100];
+    int freq[26] = {0};
+    printf("Enter a string: ");
+    scanf(" %[^\n]", str);
+    int found = 0;
+    for(int i=0; str[i]!='\0'; i++){
+        char ch = str[i];
+        if(ch>='a' && ch<='z'){
+            freq[ch-'a']++;
+            if(freq[ch-'a']==2){
+                printf("First repeating lowercase letter: %c\n", ch);
+                found = 1;
+                break;
+            }
+        }
+    }
+    if(!found)
+        printf("No repeating lowercase letter found.\n");
+    return 0;
+}
